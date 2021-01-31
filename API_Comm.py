@@ -15,9 +15,14 @@ def create_reddit_object():
     return reddit
 
 reddit = create_reddit_object()
-subred = reddit.subreddit("trakstocks")
-#subreddit class methods: hot,new,controversial,top,gilded
-hot = subred.hot(limit = 10)
+trakstocks = reddit.subreddit("trakstocks")
+wallstreetbets = reddit.subreddit('wallstreetbets')
 
-for post in hot:
-    print(post.title, post.url)
+#subreddit class methods: hot,new,controversial,top,gilded
+TrakHot = trakstocks.hot(limit = 10)
+WallHot = wallstreetbets.hot(limit = 10)
+
+#for post in hot:
+ #   print(post.title, post.url)
+for post in WallHot:
+    print(post.title,post.url)
