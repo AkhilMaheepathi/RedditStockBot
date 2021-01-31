@@ -25,4 +25,6 @@ WallHot = wallstreetbets.hot(limit = 10)
 #for post in hot:
  #   print(post.title, post.url)
 for post in WallHot:
-    print(post.title,post.url)
+    texts = post.title.split()
+    print(texts)
+    
